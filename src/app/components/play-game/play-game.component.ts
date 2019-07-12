@@ -17,13 +17,13 @@ export class PlayGameComponent implements OnInit {
   private attemptAmount: any;
   private userGuess: any;
   private computerNumber: any;
-  public userGuessValidtion: boolean;
+  private userGuessValidtion: boolean;
   private difficultyLevel: Number;
   private amountOfTries: number;
   private isUserWon: boolean;
   private amountOfHits: number;
   private amountOfNearHit: number;
-  public allGuesses: any;
+  private allGuesses: any;
   private totalHighScore: number;
   private winnerNumber: number;
 
