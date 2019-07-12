@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
 })
 export class HighScoreComponent implements OnInit {
 
-  public rankings: HighScore[] = [];
+  private rankings: HighScore[] = [];
   private highScoreModel: HighScore = new HighScore();
-  public isHighScoreSubmitted: Boolean;
+  private isHighScoreSubmitted: Boolean;
 
 
   constructor(private hishScoreService: HighScoreService, private router: Router, private cd: ChangeDetectorRef) {
