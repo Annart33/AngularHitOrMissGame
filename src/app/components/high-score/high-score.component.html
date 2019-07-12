@@ -1,0 +1,45 @@
+<div id="background">
+  <div id="enterScore" *ngIf="!isHighScoreSubmitted">
+
+    <p> Way To Go! Your High Score is: {{highScoreModel.highScore}}</p>
+    <P>Would You Like To Submit Your High Score?</P>
+
+    <form id="myForm" #myForm="ngForm" (ngSubmit)='sumbit()'>
+
+      <input #name="ngModel" required type="text" name="playerName" [(ngModel)]="highScoreModel.playerName"
+        placeholder="Your Name">
+      <br>
+      <br>
+
+      <button [disabled]="myForm.form.invalid">Submit</button>
+
+    </form>
+  </div>
+
+  <div id="playAgain" *ngIf="isHighScoreSubmitted">
+
+    <p>Want To Play Again?</p>
+    <button (click)="replay()">Replay</button>
+    <button (click)="close()">Close Page</button>
+  </div>
+
+  <div>
+    <table style="width:70%">
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>High Score</th>
+        <th>Date</th>
+      </tr>
+      <tr *ngFor="let r of rankings;  let i = index">
+        <td>{{i + 1}}</td>
+        <td>{{r.playerName}}</td>
+        <td>{{r.highScore}}</td>
+        <td>{{r.date}}</td>
+      </tr>
+
+    </table>
+
+
+  </div>
+</div>

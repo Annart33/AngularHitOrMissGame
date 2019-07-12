@@ -1,0 +1,13 @@
+<div>
+  <h2 mat-dialog-title>You Won!</h2>
+  <mat-dialog-content>You Got The Right Answer!
+    <br>
+    <br>
+    What Do You Want To Do Next?</mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="playAgain()">Play Again</button>
+    <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+    <button mat-button mat-dialog-close (click)="goToHighScoreTable()">High Score</button>
+  </mat-dialog-actions>
+</div>
+

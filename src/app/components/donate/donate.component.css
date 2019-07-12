@@ -1,0 +1,10 @@
+form{
+
+    position: absolute; top: 10%; right: 40%;
+    text-align: center;
+}
+
+#donateBtn {
+    position: absolute; right: 30%;
+    margin: 15px;
+}

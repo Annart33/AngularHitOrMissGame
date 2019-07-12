@@ -1,0 +1,36 @@
+<form action="/https://www.paypal.com/il/home" method="post" target="_blank">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="*********">
+
+  <!-- Specify a Subscribe button. -->
+  <input type="hidden" name="cmd" value="_xclick-subscriptions">
+  <!-- Identify the subscription. -->
+  <input type="hidden" name="item_name" value="Youth Program">
+  <input type="hidden" name="item_number" value="Youth Programs">
+
+  <!-- Set the terms of the regular subscription. -->
+  <input type="hidden" name="currency_code" value="AUD">
+
+  <input type="radio" name="a3" value="$10"> $10
+  <input type="radio" name="a3" value="$50"> $50
+  <input type="radio" name="a3" value="$100"> $100
+  <input type="radio" name="a3" value="$200"> $200
+  <input type="radio" name="a3" value="$500"> $500
+  <br>
+  <input type="hidden" name="p3" value="1">
+  <input type="radio" name="t3" value="W"> Weekly
+  <input type="radio" name="t3" value="M"> Monthly
+  <input type="radio" name="t3" value="Y"> Yearly
+  <br>
+
+  <!-- Set recurring payments until canceled. -->
+  <input type="hidden" name="src" value="1">
+
+  <!-- Display the payment button. -->
+  <input id="donateBtn" type="image" name="submit"
+  src="https://www.paypalobjects.com/en_AU/i/btn/btn_donateCC_LG.gif"
+  alt="Subscribe">
+  <img alt="" width="1" height="1"
+  src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" >
+</form>

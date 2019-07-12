@@ -1,0 +1,53 @@
+<div id="background">
+
+  <div id="custom-modal-2" *ngIf="!userGuessValidtion">
+    <form #myForm="ngForm">
+      <h1>Please Enter The Difficulty Level</h1>
+      <p>1.Easy: 15 guesses </p>
+      <p>2. Medium: 12 guesses</p>
+      <p>3. Hard: 9 guesses</p>
+
+      <input #name="ngModel" required type="text" name="myText2" [(ngModel)]='myText2' placeholder="Enter A Number" />
+      <br>
+
+      <button [disabled]="myForm.form.invalid" (click)="start()">Submit</button>
+
+    </form>
+
+  </div>
+
+  <div>
+
+    <div id="custom-modal-1" *ngIf="userGuessValidtion">
+      <form #myForm="ngForm">
+        <h1>Please Enter Your Guess</h1>
+        <p><input #name="ngModel" required type="text" name="myText" [(ngModel)]='myText'
+            placeholder="Enter A Number" /></p>
+        <button [disabled]="myForm.form.invalid" (click)="getValidUserGuess()">Submit</button>
+      </form>
+    </div>
+
+
+    <table *ngIf="userGuessValidtion">
+      <tr>
+        <th>No.</th>
+        <th>Hits</th>
+        <th>Misses</th>
+        <th>Number You Entered</th>
+      </tr>
+      <tr *ngFor="let a of allGuesses">
+        <td>{{a.attemptAmount}}</td>
+        <td>{{a.amountOfHits}}</td>
+        <td>{{a.amountOfNearHit}}</td>
+        <td>{{a.myText2}}</td>
+      </tr>
+
+    </table>
+
+
+
+  </div>
+
+
+
+</div>

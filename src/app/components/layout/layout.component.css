@@ -1,0 +1,33 @@
+section {
+    height: 100%;
+    background-color: white;
+    text-align: center;
+    /* display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    grid-template-rows: 13% 80% 7%; 
+    */
+    font-size: 125%;
+    background-color: coral;
+    overflow: hidden;
+    
+    
+}
+
+main{
+    background-color: coral;
+    overflow: hidden;
+}
+
+
+
+/* header , footer{
+    grid-column: span 12;
+    } */
+
+    
+    /* main{
+    
+        grid-column: span 10;
+    } */
+
+    
